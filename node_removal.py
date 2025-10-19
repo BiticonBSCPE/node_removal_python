@@ -16,3 +16,21 @@ class LinkedList:
         if self.head is None:
             self.tail = None
         return data
+    
+    def remove_at_end(self):
+        if self.head is None:
+            return None
+        if self.head.next is None:
+            data = self.head.data
+            self.head = None
+            self.tail = None
+            return data
+    
+        current = self.head
+        while current.next.next:
+            current = current.next
+        data = current.next.data
+        current.next = None
+        self.tail = current
+        return data
+    
