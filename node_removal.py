@@ -34,3 +34,22 @@ class LinkedList:
         self.tail = current
         return data
     
+    def remove_at(self, data):
+        if self.head is None:
+            return None
+
+        if self.head.data == data:
+            return self.remove_beginning()
+
+        current = self.head
+        while current.next and current.next.data != data:
+            current = current.next
+
+        if current.next is None:
+            return None
+
+        if current.next.next is None:
+            self.tail = current
+
+        current.next = current.next.next
+        return data
