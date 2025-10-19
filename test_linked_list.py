@@ -3,12 +3,12 @@ from node_removal import Node, LinkedList
 if __name__ == "__main__":
     ll = LinkedList()
 
-    ll.head = Node(10)
-    ll.head.next = Node(20)
-    ll.head.next.next = Node(30)
+    ll.head = Node(20)
+    ll.head.next = Node(30)
+    ll.head.next.next = Node(40)
     ll.tail = ll.head.next.next
 
     print("Removed from beginning:", ll.remove_beginning())
     print("Removed at end:", ll.remove_at_end())
-    print("Removed specific:", ll.remove_at(10))
-    print("Remove not found:", ll.remove_at(20))
+    print("Removed specific:", ll.remove_at(30))
+    print("Remove not found:", ll.remove_at(40))
