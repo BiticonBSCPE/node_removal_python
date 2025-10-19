@@ -10,5 +10,5 @@ if __name__ == "__main__":
 
     print("Removed from beginning:", ll.remove_beginning())
     print("Removed at end:", ll.remove_at_end())
-    print("Removed specific (20):", ll.remove_at(20))
-    print("Remove not found (99):", ll.remove_at(99))
+    print("Removed specific:", ll.remove_at(10))
+    print("Remove not found:", ll.remove_at(20))
